@@ -7,6 +7,8 @@ import { Avatar, AvatarImage } from "./ui/avatar";
 import { Textarea } from "./ui/textarea";
 import { Button } from "./ui/button";
 import { ImageIcon, Loader2Icon, SendIcon } from "lucide-react";
+import { createPosts } from "@/action/post.action";
+import toast from "react-hot-toast";
 
 function CreatePost() {
   const { user } = useUser();
@@ -15,7 +17,23 @@ function CreatePost() {
   const [isPosting, setIsPosting] = useState(false);
   const [showImageUpload, setShowImageUpload] = useState(false);
 
-  const handleSubmit = async () => {};
+  const handleSubmit = async () => {
+    if (!content.trim() && !imageUrl) return;
+    setIsPosting(true);
+    try {
+      const result = await createPosts(content, imageUrl);
+      //Reset the form
+      if (result.success) {
+        setContent("");
+        setImageUrl("");
+        setShowImageUpload(false);
+        toast.success("Post created successfully!");
+      }
+    } catch (error) {
+      console.log("Failed to create post", error);
+      toast.error("Failed to create post");
+    }
+  };
   return (
     <Card className="mb-6">
       <CardContent className="pt-6">
@@ -49,7 +67,7 @@ function CreatePost() {
             <Button
               className="flex items-center"
               onClick={handleSubmit}
-              disabled={(!content.trim() && !imageUrl) || isPosting}    // disabled if content is empty and imageUrl is empty
+              disabled={(!content.trim() && !imageUrl) || isPosting} // disabled if content is empty and imageUrl is empty
             >
               {isPosting ? (
                 <>
