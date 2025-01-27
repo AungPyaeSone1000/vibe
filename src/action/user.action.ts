@@ -3,6 +3,7 @@
 import prisma from "@/lib/prisma";
 import { auth, currentUser } from "@clerk/nextjs/server";
 
+
 export async function syncUser() {
   try {
     const { userId } = await auth();
@@ -37,6 +38,7 @@ export async function syncUser() {
   }
 }
 
+
 export async function getUserByClerkId(clerkId: string) {
   return prisma.user.findUnique({
     where: {
@@ -48,8 +50,18 @@ export async function getUserByClerkId(clerkId: string) {
           followers: true,
           following: true,
           posts: true,
-        }
-      }
-    }
+        },
+      },
+    },
   });
+}
+
+export async function getDbUserId() {
+  const { userId: clerkId } = await auth();
+  if (!clerkId) throw new Error("Unauthenticated");
+
+  const user = await getUserByClerkId(clerkId);
+  if (!user) throw new Error("User not found");
+
+  return user.id;
 }
