@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import {Toaster} from "react-hot-toast";
 import Navbar from "@/components/Navbar";
 import SideBar from "@/components/SideBar";
 
@@ -52,6 +53,7 @@ export default function RootLayout({
                 </div>
               </main>
             </div>
+            <Toaster/>
           </ThemeProvider>
         </body>
       </html>
