@@ -1,10 +1,9 @@
+import Link from "next/link";
 import { BellIcon, HomeIcon, UserIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import { SignInButton, UserButton } from "@clerk/nextjs";
-import ThemeToggle from "./ThemeToggle";
 import { currentUser } from "@clerk/nextjs/server";
-
+import ThemeToggle from "./ThemeToggle";
 async function DesktopNavbar() {
   const user = await currentUser();
 
@@ -31,7 +30,7 @@ async function DesktopNavbar() {
             <Link
               href={`/profile/${
                 user.username ??
-                user.emailAddresses[0].emailAddress.split("@")[0]
+                user.emailAddresses[0].emailAddress.split("@")[0]   //By default, if the user doesn't have a username, use their email address as the username
               }`}
             >
               <UserIcon className="w-4 h-4" />
