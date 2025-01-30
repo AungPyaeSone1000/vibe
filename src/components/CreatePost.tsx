@@ -23,7 +23,7 @@ function CreatePost() {
     try {
       const result = await createPosts(content, imageUrl);
       //Reset the form
-      if (result.success) {
+      if (result?.success) {
         setContent("");
         setImageUrl("");
         setShowImageUpload(false);
