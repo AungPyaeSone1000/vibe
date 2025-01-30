@@ -35,6 +35,7 @@ export async function getProfileByUsername(username: string) {
   }
 }
 
+// Get user posts by ascending order of createdAt
 export async function getUserPosts(userId: string) {
   try {
     const posts = await prisma.post.findMany({
@@ -89,6 +90,7 @@ export async function getUserPosts(userId: string) {
   }
 }
 
+// Get user liked posts by ascending order of createdAt
 export async function getUserLikedPosts(userId: string) {
   try {
     const likedPosts = await prisma.post.findMany({
@@ -175,6 +177,7 @@ export async function updateProfile(formData: FormData) {
   }
 }
 
+// Check if user is following another user by userId
 export async function isFollowing(userId: string) {
   try {
     const currentUserId = await getDbUserId();
