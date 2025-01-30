@@ -7,7 +7,7 @@ import {
 import { notFound } from "next/navigation";
 import ProfilePage from "./ProfilePage";
 
-export async function generateMetaData({
+export async function generateMetadata({
   params,
 }: {
   params: { username: string };
@@ -29,6 +29,13 @@ async function Profile({ params }: { params: { username: string } }) {
     isFollowing(user.id),
   ]);
 
-  return <ProfilePage user={user} posts={posts} likedPosts={likedPosts} isFollowing={isCurrentUserFollowing} />;
+  return (
+    <ProfilePage
+      user={user}
+      posts={posts}
+      likedPosts={likedPosts}
+      isFollowing={isCurrentUserFollowing}
+    />
+  );
 }
 export default Profile;
