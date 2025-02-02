@@ -17,7 +17,7 @@ Vibe is a social media application built using [Next.js](https://nextjs.org/). T
 - Tailwind CSS
 - PostgreSQL
 - Prisma
-- -Neon
+- Neon
 - Clerk
 - Uploadthing
   
