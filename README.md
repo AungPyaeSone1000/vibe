@@ -1,7 +1,3 @@
-Here's your updated **README** with emojis for a more engaging look! 🚀  
-
----
-
 # 🎵 Vibe – A Social Media Platform  
 
 Vibe is a social media application built using [Next.js](https://nextjs.org/). The application is currently deployed and accessible at [🌍 vibe-phi.vercel.app](https://vibe-phi.vercel.app).  
