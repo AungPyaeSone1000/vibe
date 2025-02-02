@@ -5,9 +5,11 @@ Vibe is a social media application built using [Next.js](https://nextjs.org/). T
 ## Features
 
 - User authentication and profile management
-- Post creation, editing, and deletion
+- Post/Comment creation, editing, and deletion
 - Real-time updates and notifications
 - Responsive design for various devices
+- Toggle dark/light theme
+- Follower/Following system
 
 ## Technologies Used
 
