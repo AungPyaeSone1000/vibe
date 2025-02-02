@@ -60,7 +60,7 @@ yarn dev
 
 🔥 Open [http://localhost:3000](http://localhost:3000) in your browser to see the result!  
 
-## 🤝 Contributing  
+##  Contributing  
 
 Contributions are welcome! 🎉 Fork the repository and submit a pull request for any enhancements or bug fixes.  
 
