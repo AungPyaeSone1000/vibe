@@ -2,6 +2,8 @@
 
 Vibe is a social media application built using [Next.js](https://nextjs.org/). The application is currently deployed and accessible at [🌍 vibe-phi.vercel.app](https://vibe-phi.vercel.app).  
 
+![Website Screenshot](public/VibeImage.png)
+
 ## ✨ Features  
 
 - 🔐 **User Authentication** – Secure login & profile management  
