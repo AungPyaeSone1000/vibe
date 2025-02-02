@@ -27,12 +27,12 @@ Vibe is a social media application built using [Next.js](https://nextjs.org/). T
 - **Clerk** (Authentication)  
 - **Uploadthing** (File Uploads)  
 
-### 📌 Prerequisites  
+## 📌 Prerequisites  
 
 - 📌 **Node.js** (v14.x or later)  
 - 📌 **npm** (v6.x or later) **or** yarn  
 
-### 📥 Installation  
+## 📥 Installation  
 
 1️⃣ **Clone the repository:**  
 ```bash
