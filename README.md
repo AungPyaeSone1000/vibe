@@ -15,7 +15,7 @@ Vibe is a social media application built using [Next.js](https://nextjs.org/). T
 - 🌙 **Dark/Light Theme Toggle** – Choose your preferred mode  
 - 👥 **Follower/Following System** – Connect with others  
 
-## 🛠 Technologies Used  
+## 🚀 Technologies Used  
 
 - **Next.js**
 - **TypeScript**  
@@ -26,10 +26,6 @@ Vibe is a social media application built using [Next.js](https://nextjs.org/). T
 - **Neon**  (Serverless Database for PostgreSQL)
 - **Clerk** (Authentication)  
 - **Uploadthing** (File Uploads)  
-
-## 🚀 Getting Started  
-
-To get a local copy of the project up and running, follow these steps:  
 
 ### 📌 Prerequisites  
 
